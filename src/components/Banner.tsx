@@ -29,7 +29,7 @@ export default function Banner() {
           <Heading color="gray.100" fontWeight="500" fontSize="2.25rem">
             7 Continents, infinite possibilities.
           </Heading>
-          <Text mt="5" color="gray.300" fontSize="1.5rem">
+          <Text mt="5" color="gray.300" fontSize="1.25rem">
             The time has come to take the trip you have always dreamed of off
             the drawing board.
           </Text>

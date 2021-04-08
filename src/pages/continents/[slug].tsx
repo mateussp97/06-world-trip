@@ -16,10 +16,12 @@ export default function Continent() {
         <Header />
         <BannerContinent title={item.title} url={item.url} />
         <ContentContinent
+          title={item.title}
           cities={item.cities}
           countries={item.countries}
           language={item.language}
           summary={item.summary}
+          facts={item.facts}
         />
       </Flex>
     ));
