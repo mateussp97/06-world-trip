@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, Heading, Box, Text, Container } from '@chakra-ui/react';
+import Link from 'next/link';
+import { Flex, Heading, Text } from '@chakra-ui/react';
 import { ContinentsSlide as data } from './../data/ContinentsSlide';
 // Import Swiper React components
 import SwiperCore, {
@@ -64,15 +65,17 @@ export default function ContinentsSlide() {
                 <Heading color="gray.100" fontWeight="700" fontSize="3rem">
                   {item.title}
                 </Heading>
-                <Text
-                  w="30rem"
-                  mt="1.5rem"
-                  color="gray.100"
-                  fontWeight="700"
-                  fontSize="1.25rem"
-                >
-                  {item.description}
-                </Text>
+                <Link href={`/continents/${item.slug}`}>
+                  <Text
+                    w="30rem"
+                    mt="1.5rem"
+                    color="gray.100"
+                    fontWeight="700"
+                    fontSize="1.25rem"
+                  >
+                    {item.description}
+                  </Text>
+                </Link>
               </Flex>
             </SwiperSlide>
           ))}
