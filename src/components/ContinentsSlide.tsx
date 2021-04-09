@@ -29,7 +29,7 @@ export default function ContinentsSlide() {
     >
       <Heading
         textAlign="center"
-        fontSize="2rem"
+        fontSize={{ base: '1.75rem', md: '2rem', lg: '2rem' }}
         fontWeight="500"
         color="gray.700"
         mb="3rem"
@@ -38,7 +38,7 @@ export default function ContinentsSlide() {
         <br />
         Then choose your continent
       </Heading>
-      <Flex maxW="1160px" h="450px">
+      <Flex w="100%" maxW="1160px" h="450px">
         <Swiper
           slidesPerView={1}
           navigation
@@ -53,6 +53,7 @@ export default function ContinentsSlide() {
               <Flex
                 w="100%"
                 h="100%"
+                px="1rem"
                 bg={`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${item.url})`}
                 bgPosition="center"
                 bgSize="cover"
@@ -62,16 +63,25 @@ export default function ContinentsSlide() {
                 justify="center"
                 textAlign="center"
               >
-                <Heading color="gray.100" fontWeight="700" fontSize="3rem">
+                <Heading
+                  color="gray.100"
+                  fontWeight="700"
+                  fontSize={{ base: '2rem', md: '2.5rem', lg: '3rem' }}
+                  wordBreak="break-word"
+                >
                   {item.title}
                 </Heading>
                 <Link href={`/continents/${item.slug}`}>
                   <Text
-                    w="30rem"
-                    mt="1.5rem"
+                    maxW="400px"
+                    mt={{ base: '1rem', md: '1.5rem', lg: '1.5rem' }}
                     color="gray.100"
                     fontWeight="700"
-                    fontSize="1.25rem"
+                    fontSize={{
+                      base: '1.125rem',
+                      md: '1.25rem',
+                      lg: '1.25rem',
+                    }}
                   >
                     {item.description}
                   </Text>
