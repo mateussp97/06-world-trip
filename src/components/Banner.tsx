@@ -18,14 +18,12 @@ export default function Banner() {
         maxW="1160px"
         w="100%"
         mx="auto"
-        display="flex"
         direction={isLargerThan1000 ? 'row' : 'column'}
         alignItems="center"
         justifyContent={isLargerThan1000 ? 'space-between' : 'center'}
       >
         <Flex
           maxW="600px"
-          display="flex"
           direction="column"
           align="start"
           justify="space-between"
