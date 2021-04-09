@@ -9,11 +9,19 @@ export default function TravelTypes() {
       width="100vw"
       height="100%"
       pt="5rem"
+      px="1rem"
       direction="column"
       alignItems="center"
       justifyContent="center"
     >
-      <Wrap h="100%" w="100%" maxW="1160px" mx="auto" justify="space-between">
+      <Wrap
+        h="100%"
+        w="100%"
+        maxW="1160px"
+        mx="auto"
+        justify={{ base: 'center', md: 'space-between', lg: 'space-between' }}
+        spacing={{ base: '3rem', md: '0', lg: '0' }}
+      >
         {data.map((item) => (
           <WrapItem key={item.text}>
             <Flex
@@ -21,11 +29,15 @@ export default function TravelTypes() {
               alignItems="center"
               justifyContent="center"
             >
-              <Image src={item.url} />
+              <Image
+                src={item.url}
+                w={{ base: '64px', md: '64px', lg: '80px' }}
+                h={{ base: '64px', md: '64px', lg: '80px' }}
+              />
               <Text
                 color="gray.700"
                 mt="1.5rem"
-                fontSize="1.25rem"
+                fontSize={{ base: '1.125rem', md: '1.125rem', lg: '1.25rem' }}
                 fontWeight="medium"
               >
                 {item.text}
