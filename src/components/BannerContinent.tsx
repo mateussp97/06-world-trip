@@ -11,6 +11,7 @@ export default function BannerContinent({ url, title }: IBannerContinent) {
     <Flex
       w="100vw"
       h="500px"
+      px="1rem"
       bg={`linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${url})`}
       bgPosition="center"
       bgSize="cover"
@@ -20,11 +21,15 @@ export default function BannerContinent({ url, title }: IBannerContinent) {
         maxW="1160px"
         w="100%"
         mx="auto"
-        display="flex"
         alignItems="center"
         justifyContent="space-between"
       >
-        <Heading mb="-18rem" color="gray.100" fontWeight="500" fontSize="3rem">
+        <Heading
+          mb="-18rem"
+          color="gray.100"
+          fontWeight="500"
+          fontSize={{ base: '2.5rem', md: '2.75rem', lg: '3rem' }}
+        >
           {title}
         </Heading>
       </Flex>
