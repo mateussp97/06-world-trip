@@ -23,11 +23,10 @@ export default function Continent() {
       >
         <Head>
           <title>WorldTrip - {item.title}</title>
-
+          <link rel="shortcut icon" href="favicon.ico" type="image/.png" />
           <meta property="og:title" content={`WorldTrip ${item.title}`} />
           <meta property="og:description" content={item.summary} />
           <meta name="twitter:title" content={`WorldTrip ${item.title}`} />
-
           <meta name="twitter:image" content={item.url} />
           <meta name="twitter:image:src" content={item.url} />
           <meta property="og:image" content={item.url} />

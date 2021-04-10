@@ -10,6 +10,7 @@ export default function Home() {
     <Flex maxW="100vw" overflowX="hidden" direction="column">
       <Head>
         <title>WorldTrip - Home</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/.png" />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
