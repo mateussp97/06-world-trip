@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
 import { Flex, Wrap, WrapItem, Heading } from '@chakra-ui/react';
 import Header from '../../components/Header';
@@ -20,6 +21,18 @@ export default function Continent() {
         overflowY="hidden"
         direction="column"
       >
+        <Head>
+          <title>WorldTrip - {item.title}</title>
+
+          <meta property="og:title" content={`WorldTrip ${item.title}`} />
+          <meta property="og:description" content={item.summary} />
+          <meta name="twitter:title" content={`WorldTrip ${item.title}`} />
+
+          <meta name="twitter:image" content={item.url} />
+          <meta name="twitter:image:src" content={item.url} />
+          <meta property="og:image" content={item.url} />
+          <meta property="og:image:secure_url" content={item.url} />
+        </Head>
         <Header />
         <BannerContinent title={item.title} url={item.url} />
         <ContentContinent
