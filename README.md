@@ -34,4 +34,4 @@ Project developed with:
 
 #### Run
 
-Run `yarn start` and access the application via http://localhost:3000
+Run `yarn dev` and access the application via http://localhost:3000
